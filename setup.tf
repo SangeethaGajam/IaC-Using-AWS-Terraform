@@ -1,7 +1,7 @@
 provider "aws" {
   region = "us-east-1"
-  access_key = "AKIAWH76QECVBB325IFZ"
-  secret_key = "zLR6oLMY5wmP02zlSukBIpaOnStjrbqfRu9mAGKB"
+  access_key = "###Give your access key here###"
+  secret_key = "###Give your secret key here###"
 }
 
 #Get Linux AMI ID using SSM Parameter endpoint in us-east-1
