@@ -28,6 +28,9 @@ resource "aws_instance" "webserver1" {
   tags = {
     Name = "webserver1"
   }
+  lifecycle {
+    create_before_destroy = true
+  }
 }
 
 #Create webserver and serves a static HTML file
@@ -54,9 +57,10 @@ resource "aws_instance" "webserver2" {
   tags = {
     Name = "webserver2"
   }
+  lifecycle {
+    create_before_destroy = true
+  }
 }
-
-
 
 
 # Create ELB 
@@ -91,6 +95,9 @@ resource "aws_elb" "terraform-elb" {
 
   tags = {
   Name = "terraform-elb"
+  }
+  lifecycle {
+    create_before_destroy = true
   }
 }
 
