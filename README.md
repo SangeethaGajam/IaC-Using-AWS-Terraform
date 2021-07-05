@@ -52,11 +52,11 @@ Creates load balancer on those both EC2 instances.
 Here is the public ips for 2 ec2 instances.
 You can see the output by hitting the below links.
 Instance1
-http://3.91.68.208/
+http://174.129.153.84/
 or
-http://ec2-3-91-68-208.compute-1.amazonaws.com/
+https://ec2-174-129-153-84.compute-1.amazonaws.com/
 
 Instance2
-http://3.80.108.132/
+http://54.147.142.148/
 or
-http://ec2-3-80-108-132.compute-1.amazonaws.com/
+http://ec2-54-147-142-148.compute-1.amazonaws.com/
