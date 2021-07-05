@@ -44,3 +44,16 @@ $ terraform apply : Executes the actions proposed in a Terraform plan
 
 **Note : $ terraform destroy : To delete all the resources
 
+Once you execute the above project. You can see the 2 ec2 instances on AWS management console, EC2 instances.
+Creates load balancer on those both EC2 instances.
+Here is the public ips for 2 ec2 instances.
+You can see the by hitting the below links.
+Instance1
+http://3.91.68.208/
+or
+http://ec2-3-91-68-208.compute-1.amazonaws.com/
+
+Instance2
+http://3.80.108.132/
+or
+http://ec2-3-80-108-132.compute-1.amazonaws.com/
