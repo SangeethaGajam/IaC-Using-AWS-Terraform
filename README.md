@@ -1,14 +1,5 @@
 # IaC-Using-AWS-Terraform
 
-**Installing Terraform on Windows,**
-- Go to www.terraform.io, Downloads. And then choose Windows 64 bit for Windows. You can see a zip file downloaded.
-- Go to Downloads, extract the zip file. Now you can see **terraform.exe** file. Copy the file.
-- Go to C directory, create new folder ‘Terraform’. Paste it inside.
-- Copy the location, C:\Terraform
-- Go to system properties -->  env variable --> Click on Path --> Edit --> New --> paste the location **C:\Terraform**. Click ok, ok, ok
-- Test that terraform is installed. Go to cmd prompt, and type this command.
-  terraform -v
-
 **Installing Terraform on Linux,**
 Login to linux machine. 
 - Create the directory with the following command: mkdir terraform && cd terraform
@@ -21,21 +12,35 @@ Login to linux machine.
   export PATH=$PATH:$HOME/terraform
 - Test that Terraform is installed by typing this command: terraform -v
 
+**Installing Terraform on Windows,**
+- Go to www.terraform.io, Downloads. And then choose Windows 64 bit for Windows. You can see a zip file downloaded.
+- Go to Downloads, extract the zip file. Now you can see **terraform.exe** file. Copy the file.
+- Go to C directory, create new folder ‘Terraform’. Paste it inside.
+- Copy the location, C:\Terraform
+- Go to system properties -->  env variable --> Click on Path --> Edit --> New --> paste the location **C:\Terraform**. Click ok, ok, ok
+- Test that terraform is installed. Go to cmd prompt, and type this command.
+  terraform -v
 
+**Set up the environment to work with AWS, Terraform on Windows machine.**
+Login to AWS free tier account/AWS management console.
+- Select your region. I have choosen 'us-east-1'.
+- Go to your profile name, select **My security credentials** --> Access Keys --> Create new Access Key. Copy the Access/ Secret keys.
+- Go to key pairs --> Create key pair --> Give it a name. Choose file format pem and click Create key pair.
+
+- Login to Visual studio code. Go to Extensions, Search for Terraform. Install Terraform by HashiCorp.
+- Create a working directory folder in your machine. Open the folder in Visual Studio code.
+
+Ensure you copy **.terraform** file to the working directory folder.
 main.tf - Launches EC2 instances, Elastic load balancer. Created 2 instances. 
-output.tf - Declared outputs
-var.tf - Declared variables
+output.tf - Declare outputs
+var.tf - Declare variables
 setup.tf - AWS Provider, sets default AWS region, calculates availability zones, Launches VPC, subnets, route tables, security groups etc.
 
-Command Line Examples: Torun the above project,
+**Command Lines: To run the above project, use the below commands**
 
-To setup provisioner
-$ terraform init
+$ terraform init : To initialize
+$ terraform plan : Creates an execution plan
+$ terraform apply : Executes the actions proposed in a Terraform plan
 
-To launch the EC2 demo cluster
-$ terraform plan 
-$ terraform apply 
-
-To teardown the EC2 demo cluster:
-$ terraform destroy 
+**Note : $ terraform destroy : To delete all the resources
 
