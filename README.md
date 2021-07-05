@@ -1,5 +1,8 @@
 # IaC-Using-AWS-Terraform
 
+Find the steps here to install Terraform on different machines.
+https://learn.hashicorp.com/tutorials/terraform/install-cli
+
 **Installing Terraform on Linux,**
 Login to linux machine. 
 - Create the directory with the following command: mkdir terraform && cd terraform
