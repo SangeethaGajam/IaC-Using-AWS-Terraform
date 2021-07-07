@@ -3,18 +3,6 @@
 Find the steps here to install Terraform on different machines.
 https://learn.hashicorp.com/tutorials/terraform/install-cli
 
-**Installing Terraform on Linux,**
-Login to linux machine. 
-- Create the directory with the following command: mkdir terraform && cd terraform
-- Then, download Terraform using this command: wget https://releases.hashicorp.com/terraform/0.11.14/terraform_0.11.14_linux_amd64.zip
-- Install a program called ‘unzip’ in order to unzip the downloaded zip file:
-  sudo yum install unzip
-- Once installed, unpack the Terraform download: 
-  unzip terraform_0.11.14_linux_amd64.zip
-- Set the Linux path to point to Terraform with the following command: 
-  export PATH=$PATH:$HOME/terraform
-- Test that Terraform is installed by typing this command: terraform -v
-
 **Installing Terraform on Windows,**
 - Go to www.terraform.io, Downloads. And then choose Windows 64 bit for Windows. You can see a zip file downloaded.
 - Go to Downloads, extract the zip file. Now you can see **terraform.exe** file. Copy the file.
@@ -34,10 +22,12 @@ Login to AWS free tier account/AWS management console.
 - Create a working directory folder in your machine. Open the folder in Visual Studio code.
 
 Ensure you copy **.terraform** file to the working directory folder.
-main.tf - Launches EC2 instances, Elastic load balancer. Created 2 instances. 
-output.tf - Declare outputs
-var.tf - Declare variables
-setup.tf - AWS Provider, sets default AWS region, calculates availability zones, Launches VPC, subnets, route tables, security groups etc.
+provider.tf : Details of AWS provider
+main.tf : Launches 2 EC2 instances, Elastic load balancer. 
+output.tf : Declare outputs
+variables.tf : Declare variables
+nsg.tf : Security groups
+setup.tf : Calculates availability zones, Launches VPC, subnets, route tables etc.
 
 **Command Lines: To run the above project, use the below commands**
 
@@ -52,11 +42,11 @@ Creates load balancer on those both EC2 instances.
 Here is the public ips for 2 ec2 instances.
 You can see the output by hitting the below links.
 Instance1
-http://174.129.153.84/
+http://3.91.97.119:80
 or
-https://ec2-174-129-153-84.compute-1.amazonaws.com/
+ec2-3-91-97-119.compute-1.amazonaws.com:80
 
 Instance2
-http://54.147.142.148/
+http://107.23.17.234/
 or
-http://ec2-54-147-142-148.compute-1.amazonaws.com/
+https://ec2-107-23-17-234.compute-1.amazonaws.com/
